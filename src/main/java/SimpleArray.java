@@ -14,5 +14,9 @@ public class SimpleArray {
 
         int numberOfElements = names.length;
         System.out.println("Moja tablica ma rozmiar " +numberOfElements);
+
+        for (int i=0; i<numberOfElements; i++)
+        { System.out.println ("Element " +i+ " tablicy " +names[i]);
+        }
     }
 }
