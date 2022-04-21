@@ -35,12 +35,4 @@ public class UserDialogs {
         int val = scanner.nextInt();
         return val;
     }
-
-    public static String getColor() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter letter:");
-        String letter = scanner.nextLine().trim();
-
-        return letter;
-    }
 }
