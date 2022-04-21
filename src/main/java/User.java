@@ -2,9 +2,9 @@ public class User {
     public static void main (String[] args) {
 
         int average= 0;
-        UserUser[] users = new UserUser[4];
-        String[] names = {"Asia", "Basia", "Kasia", "Zosia"};
-        int[] ages = {20, 35, 40, 30};
+        UserUser[] users = new UserUser[6];
+        String[] names = {"Asia", "Basia", "Kasia", "Zosia", "Tomek", "Romek"};
+        int[] ages = {20, 55, 40, 30, 35, 66};
 
         for(int i=0; i<users.length; i++) {
             users[i] = new UserUser();
@@ -16,7 +16,7 @@ public class User {
             average = average + users[i].age;
         }
         average = average / users.length;
-        System.out.println("srednia " +average);
+        System.out.println("Srednia wieku: " +average);
 
         for (int i=0; i<users.length; i++) {
             if (users[i].age<average) {
