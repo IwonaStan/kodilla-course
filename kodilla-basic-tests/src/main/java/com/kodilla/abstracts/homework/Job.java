@@ -9,7 +9,4 @@ public abstract class Job {
         this.salary = salary;
         this.responsibilities = responsibilities;
     }
-
-    public abstract double getSalary();
-    public abstract String getResponsibilities();
 }
