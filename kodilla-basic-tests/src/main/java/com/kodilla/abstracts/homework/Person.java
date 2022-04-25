@@ -30,7 +30,6 @@ public class Person {
                     "\nSalary:"+driver.salary+"PLN\nResponsibilities:" +driver.responsibilities);
             break;
         default: System.out.println("Wrong choice.");
-    }
-
+        }
     }
 }
