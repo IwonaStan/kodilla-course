@@ -4,6 +4,8 @@ public class Teacher extends Job {
 
     public Teacher(double salary, String responsibilities) {
         super(salary, responsibilities);
-    }
 
+        Job.setSalary(salary);
+        Job.setResponsibilities(responsibilities);
+    }
 }
