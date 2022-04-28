@@ -2,19 +2,19 @@ package Interfaces.Homework;
 
 public class Fiat implements Car {
 
-    private static double speed;
+    double speedPlus;
+    double speedMinus;
+    double speedTotal;
 
-    public Fiat () {
-        this.speed = 0;
-    }
+    public Fiat (double speedPlus, double speedMinus) {
+        this.speedPlus = speedPlus;
+        this.speedMinus = speedMinus;
+        this.speedTotal = 0;
+      }
 
-    public void increaseSpeed() {
-        this.speed += 25;
-    }
-    public void decreaseSpeed() {
-        this.speed -= 20;
-    }
+    public double increaseSpeed() { this.speedTotal += this.speedPlus; return speedTotal; }
+    public double decreaseSpeed() { this.speedTotal -= this.speedMinus; return speedTotal; }
     public double getSpeed() {
-        return speed;
+        return speedTotal;
     }
 }
