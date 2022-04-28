@@ -2,14 +2,13 @@ package com.kodilla.bank.homework;
 
 public class Bank {
 
-    private int[] cashMachines;
-    double [] helpTab;
+    CashMachine[] totalCashMachines;
     int numberOfCashMachines, sizeTab;
+    double helpTab[];
     double value, variable;
-    CashMachine cashMachine = new CashMachine();
 
     public Bank() {
-        this.cashMachines = new int[0];
+        this.totalCashMachines = new CashMachine[0];
         this.helpTab = new double[0];
         this.numberOfCashMachines = this.sizeTab = 0;
         this.value = this.variable = 0;
@@ -17,9 +16,9 @@ public class Bank {
 
     public void addMachines() {
         this.numberOfCashMachines++;
-        int[] newTab = new int[this.numberOfCashMachines];
-        System.arraycopy(cashMachines, 0, newTab, 0, cashMachines.length);
-        this.cashMachines = newTab;
+        CashMachine[] newTab = new CashMachine[this.numberOfCashMachines];
+        System.arraycopy(totalCashMachines, 0, newTab, 0, totalCashMachines.length);
+        this.totalCashMachines = newTab;
     }
     public void addPayment(double value) {
             this.sizeTab++;
