@@ -16,7 +16,7 @@ public class CarsListApplication {
         polonezList.add(new Polonez(40,10));
         System.out.println("Size :"+polonezList.size());
         for (Polonez polonez:polonezList) {
-            System.out.println(CarUtils.describeCar(polonez));
+            CarUtils.describeCar(polonez);
         }
 
         polonezList.remove(1);

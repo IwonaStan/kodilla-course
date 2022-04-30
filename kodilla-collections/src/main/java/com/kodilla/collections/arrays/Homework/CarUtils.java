@@ -7,12 +7,11 @@ import Interfaces.Homework.Trabant;
 
 public class CarUtils {
 
-    public static int describeCar(Car car) {
+    public static void describeCar(Car car) {
         System.out.println("+-+ +-+-+ +-+ +-+-+ +-+");
         System.out.println("Car model: " +getCarModel(car));
-        System.out.println("Increasing speed: " +car.increaseSpeed());
-        System.out.println("Decreasing speed: " +car.decreaseSpeed());
-        return 0;
+        System.out.println("Increasing speed: " +car.getSpeedPlus());
+        System.out.println("Decreasing speed: " +car.getSpeedMinus());
     }
 
     private static String getCarModel(Car car) {

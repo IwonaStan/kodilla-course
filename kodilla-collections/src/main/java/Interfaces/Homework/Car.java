@@ -2,7 +2,9 @@ package Interfaces.Homework;
 
 public interface Car {
 
-    double increaseSpeed();
-    double decreaseSpeed();
-    double getSpeed();
+    void increaseSpeed();
+    void decreaseSpeed();
+    int getSpeed();
+    int getSpeedPlus();
+    int getSpeedMinus();
 }

@@ -2,19 +2,33 @@ package Interfaces.Homework;
 
 public class Trabant implements Car {
 
-    double speedPlus;
-    double speedMinus;
-    double speedTotal;
+    int speedPlus;
+    int speedMinus;
+    int speedTotal;
 
-    public Trabant (double speedPlus, double speedMinus) {
+    public Trabant(int speedPlus, int speedMinus) {
         this.speedPlus = speedPlus;
         this.speedMinus = speedMinus;
         this.speedTotal = 0;
     }
 
-    public double increaseSpeed() { this.speedTotal += this.speedPlus; return speedTotal; }
-    public double decreaseSpeed() { this.speedTotal -= this.speedMinus; return speedTotal; }
-    public double getSpeed() {
+    public void increaseSpeed() {
+        this.speedTotal += this.speedPlus;
+    }
+
+    public void decreaseSpeed() {
+        this.speedTotal -= this.speedMinus;
+    }
+
+    public int getSpeed() {
         return speedTotal;
+    }
+
+    public int getSpeedPlus() {
+        return speedPlus;
+    }
+
+    public int getSpeedMinus() {
+        return speedMinus;
     }
 }
