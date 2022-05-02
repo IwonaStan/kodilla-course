@@ -1,4 +1,4 @@
-package Interfaces.Homework;
+package com.kodilla.collections.Interfaces.Homework;
 
 public class CarRace {
     public static void main(String[] args) {

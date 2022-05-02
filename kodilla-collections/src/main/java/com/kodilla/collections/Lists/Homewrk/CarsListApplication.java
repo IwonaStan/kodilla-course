@@ -1,6 +1,6 @@
 package com.kodilla.collections.Lists.Homewrk;
 
-import Interfaces.Homework.Polonez;
+import com.kodilla.collections.Interfaces.Homework.Polonez;
 import com.kodilla.collections.arrays.Homework.CarUtils;
 
 import java.util.ArrayList;

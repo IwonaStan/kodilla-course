@@ -1,9 +1,9 @@
 package com.kodilla.collections.Lists;
 
-import Interfaces.Circle;
-import Interfaces.Shape;
-import Interfaces.Square;
-import Interfaces.Triangle;
+import com.kodilla.collections.Interfaces.Circle;
+import com.kodilla.collections.Interfaces.Shape;
+import com.kodilla.collections.Interfaces.Square;
+import com.kodilla.collections.Interfaces.Triangle;
 import java.util.LinkedList;
 import java.util.List;
 

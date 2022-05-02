@@ -1,6 +1,6 @@
 package com.kodilla.collections.Lists;
 
-import Interfaces.Square;
+import com.kodilla.collections.Interfaces.Square;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package Interfaces.Homework;
+package com.kodilla.collections.Interfaces.Homework;
 
 public interface Car {
 

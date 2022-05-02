@@ -1,4 +1,4 @@
-package Interfaces;
+package com.kodilla.collections.Interfaces;
 
 public interface Shape {
 
