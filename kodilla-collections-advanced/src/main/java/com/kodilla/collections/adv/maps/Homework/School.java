@@ -12,7 +12,17 @@ public class School {
             this.studentsNumber.add(school);
     }
 
-    public List<Integer> getStudentsNumber() {
-        return studentsNumber;
+    public int getStudentsSum() {
+        int studentsSum = 0;
+        for (int sum : studentsNumber)
+            studentsSum += sum;
+        return studentsSum;
+    }
+
+    @Override
+    public String toString() {
+        return "School{" +
+                "studentsNumber=" + studentsNumber +
+                '}';
     }
 }
