@@ -10,6 +10,11 @@ public abstract class Job {
         this.responsibilities = responsibilities;
     }
 
+    @Override
+    public String toString() {
+        return "salary: " + salary +" PLN \n"+ responsibilities;
+    }
+
     public double getSalary() {
         return salary;
     }
