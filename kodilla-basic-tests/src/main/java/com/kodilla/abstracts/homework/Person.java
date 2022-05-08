@@ -11,8 +11,8 @@ public class Person {
         this.firstName = firstName;
         this.age = age;
     }
-    public void printJob(Job job) {
-        System.out.println(job);
+    public void printResponsibilities() {
+        System.out.println(job.getResponsibilities());
     }
     public Job getJob() {
         return job;

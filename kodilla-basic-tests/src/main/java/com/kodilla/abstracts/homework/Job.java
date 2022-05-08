@@ -15,9 +15,6 @@ public abstract class Job {
         return "salary: " + salary +" PLN \n"+ responsibilities;
     }
 
-    public double getSalary() {
-        return salary;
-    }
     public String getResponsibilities() {
         return responsibilities;
     }
