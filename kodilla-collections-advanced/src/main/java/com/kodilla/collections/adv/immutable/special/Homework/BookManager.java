@@ -13,9 +13,6 @@ public class BookManager {
         // to można było jeszcze skrócić bookList.add(new Book(title, author);
         Book book = new Book(title, author);
 
-        int i = bookList.size();
-        if(i<1) bookList.add(book);
-
         for (Book book1:bookList) {
             if (book1.equals(book))
                 return new Book(title, author);
