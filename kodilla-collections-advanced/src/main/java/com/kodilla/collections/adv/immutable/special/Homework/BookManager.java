@@ -24,7 +24,6 @@ public class BookManager {
             }
             var++;
         }
-
         bookList.add(book);
         return new Book(title, author);
     }
