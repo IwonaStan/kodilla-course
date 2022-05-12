@@ -1,19 +1,29 @@
 package com.kodilla.bank.homework;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class BankTestSuite {
-
+ /*
     @Test
     public void AddCashMachines() {
         Bank bank = new Bank();
-        bank.addMachines();
-        bank.addMachines();
-        bank.addMachines();
+        CashMachine cashMachine = new CashMachine();
+        bank.addMachines(cashMachine);
+        bank.addMachines(cashMachine);
+        bank.addMachines(cashMachine);
 
         assertEquals(3,bank.numberOfCashMachines);
     }
+       @Test
+    public void BalanceOfCashMachines() {
+        Bank bank = new Bank();
+        CashMachine cashMachine = new CashMachine();
+        cashMachine.addTransaction(100);
+        cashMachine.addTransaction(100);
+
+        bank.balanceCashMachines(2);
+
+        assertEquals(100, bank.balanceCashMachines(2));
+    }
+
     @Test
     public void Payments() {
         Bank bank = new Bank();
@@ -58,4 +68,6 @@ public class BankTestSuite {
 
         assertEquals(400.40,bank.AveragePaymentOnAccount(),2);
     }
+
+     */
 }
