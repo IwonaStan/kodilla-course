@@ -11,7 +11,7 @@ public class Warehouse {
         orderList.add(order);
         return orderList;
     }
-    public void getOrder(String number) {
+    public void getOrder(String number) throws OrderDoesntExistException{
         orderList.stream()
            .filter(n -> n.getNumber().equals(number))
            .forEach(System.out::println);

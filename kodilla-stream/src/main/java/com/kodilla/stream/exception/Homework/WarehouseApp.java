@@ -15,6 +15,10 @@ public class WarehouseApp {
 
             System.out.println("Enter order number:");
             String s = scanner.nextLine();
+        try {
             warehouse.getOrder(s);
+        } catch (OrderDoesntExistException e) {
+            e.printStackTrace();
+        }
     }
 }
