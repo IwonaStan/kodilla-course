@@ -11,14 +11,14 @@ public class WarehouseApp {
         warehouse.addOrder(new Order("122"));
         warehouse.addOrder(new Order("133"));
         warehouse.addOrder(new Order("144"));
-        warehouse.addOrder(new Order("155"));
+        warehouse.addOrder(new Order("122"));
 
             System.out.println("Enter order number:");
             String s = scanner.nextLine();
         try {
             warehouse.getOrder(s);
         } catch (OrderDoesntExistException e) {
-            e.printStackTrace();
+            System.out.println("Wrong order number :(");
         }
     }
 }
