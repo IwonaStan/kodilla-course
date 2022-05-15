@@ -32,6 +32,7 @@ public class CashMachineTestSuite {
         cashMachine.addTransaction(-45.28);
 
         cashMachine.balanceOfCashMachine();
+
         assertEquals(1071.37,cashMachine.balance,2);
     }
     @Test
@@ -43,6 +44,7 @@ public class CashMachineTestSuite {
         cashMachine.addTransaction(-45.28);
 
         cashMachine.countingTransactions();
+
         assertEquals(3,cashMachine.count,2);
     }
 }

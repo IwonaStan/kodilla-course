@@ -4,17 +4,17 @@ public class CashMachine {
 
     public double[] transactions;
     private int sizeTab;
-    double balance;
-    int count;
+    double balance, positiveTransaction, negativeTransaction;
+    int count, countPositive, countNegative;
 
     public CashMachine() {
         this.transactions = new double[0];
         this.sizeTab = 0;
-        this.balance = 0;
-        this.count = 0;
+        this.balance = this.positiveTransaction = this.negativeTransaction = 0;
+        this.count = this.countPositive = this.countNegative = 0;
     }
 // dodawanie transakcji do tablicy
-    public void addTransaction(double value) {
+    public double addTransaction(double value) {
         if (value!=0) {
             this.sizeTab++;
             double[] newTab = new double[this.sizeTab];
@@ -22,6 +22,16 @@ public class CashMachine {
             newTab[this.sizeTab - 1] = value;
             this.transactions = newTab;
         }
+        if (value>0) {
+            positiveTransaction += value;
+            countPositive++;
+        }
+        if (value<0) {
+            negativeTransaction += value;
+            countNegative ++;
+        }
+
+        return value;
     }
     public double[] getValues() {
         return transactions;

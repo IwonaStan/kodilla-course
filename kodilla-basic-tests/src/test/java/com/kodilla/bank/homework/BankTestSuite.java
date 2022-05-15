@@ -1,73 +1,87 @@
 package com.kodilla.bank.homework;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class BankTestSuite {
- /*
+
     @Test
     public void AddCashMachines() {
         Bank bank = new Bank();
-        CashMachine cashMachine = new CashMachine();
-        bank.addMachines(cashMachine);
-        bank.addMachines(cashMachine);
-        bank.addMachines(cashMachine);
+        bank.addMachines(new CashMachine());
+        bank.addMachines(new CashMachine());
+        bank.addMachines(new CashMachine());
 
         assertEquals(3,bank.numberOfCashMachines);
     }
-       @Test
-    public void BalanceOfCashMachines() {
-        Bank bank = new Bank();
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addTransaction(100);
-        cashMachine.addTransaction(100);
-
-        bank.balanceCashMachines(2);
-
-        assertEquals(100, bank.balanceCashMachines(2));
-    }
-
     @Test
-    public void Payments() {
+    public void balanceOfCashMachines() {
         Bank bank = new Bank();
-        bank.addPayment(-200.20);
-        bank.addPayment(300.30);
-        bank.addPayment(0);
-        bank.addPayment(-400.40);
-        bank.addPayment(500.50);
+            CashMachine cashMachine1 = new CashMachine();
+            cashMachine1.addTransaction(100);
+            cashMachine1.addTransaction(100);
+            bank.addMachines(cashMachine1);
+                CashMachine cashMachine2 = new CashMachine();
+                cashMachine2.addTransaction(200);
+                bank.addMachines(cashMachine2);
 
-        assertEquals(-600.60,bank.Payment(),2);
+        bank.balanceOfCashMachines();
+
+        assertEquals(400,bank.totalBalance);
     }
     @Test
-    public void PaymentsOnAccount() {
+    public void negativeBalance() {
         Bank bank = new Bank();
-        bank.addPayment(-200.20);
-        bank.addPayment(300.30);
-        bank.addPayment(0);
-        bank.addPayment(-400.40);
-        bank.addPayment(500.50);
+            CashMachine cashMachine1 = new CashMachine();
+            cashMachine1.addTransaction(100);
+            cashMachine1.addTransaction(-100);
+            bank.addMachines(cashMachine1);
+                CashMachine cashMachine2 = new CashMachine();
+                cashMachine2.addTransaction(200);
+                cashMachine2.addTransaction(-100);
+                cashMachine2.addTransaction(100);
+                bank.addMachines(cashMachine2);
 
-        assertEquals(800.80,bank.PaymentOnAccount(),2);
+        bank.negativeBalance();
+
+        assertEquals(-200,bank.negBalance);
     }
     @Test
-    public void AveragePayments() {
+    public void positiveBalance() {
         Bank bank = new Bank();
-        bank.addPayment(-200.20);
-        bank.addPayment(300.30);
-        bank.addPayment(0);
-        bank.addPayment(-400.40);
-        bank.addPayment(500.50);
+            CashMachine cashMachine1 = new CashMachine();
+            cashMachine1.addTransaction(100);
+            cashMachine1.addTransaction(-100);
+            bank.addMachines(cashMachine1);
+                CashMachine cashMachine2 = new CashMachine();
+                cashMachine2.addTransaction(200);
+                cashMachine2.addTransaction(-200);
+                bank.addMachines(cashMachine2);
 
-        assertEquals(300.30,bank.AveragePayment(),2);
+        bank.positiveBalance();
+
+        assertEquals(300,bank.posBalance);
     }
     @Test
-    public void AveragePaymentsOnAccount() {
+    public void averageNegativeTransaction() {
         Bank bank = new Bank();
-        bank.addPayment(-200.20);
-        bank.addPayment(300.30);
-        bank.addPayment(0);
-        bank.addPayment(-400.40);
-        bank.addPayment(500.50);
+        CashMachine cashMachine1 = new CashMachine();
+        cashMachine1.addTransaction(-100);
+        cashMachine1.addTransaction(100);
+        bank.addMachines(cashMachine1);
+        //----------------------------
+        CashMachine cashMachine2 = new CashMachine();
+        cashMachine2.addTransaction(-200);
+        cashMachine2.addTransaction(200);
+        bank.addMachines(cashMachine2);
+        //----------------------------
+        CashMachine cashMachine3 = new CashMachine();
+        cashMachine3.addTransaction(-300);
+        cashMachine3.addTransaction(300);
+        bank.addMachines(cashMachine3);
 
-        assertEquals(400.40,bank.AveragePaymentOnAccount(),2);
+        bank.averageNegativeTransaction();
+
+        assertEquals(-200,bank.negAverage);
     }
-
-     */
 }
