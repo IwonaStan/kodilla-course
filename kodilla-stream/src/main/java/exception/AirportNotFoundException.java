@@ -1,4 +1,4 @@
-package com.kodilla.stream.exception;
+package exception;
 
 public class AirportNotFoundException extends Exception {
 }

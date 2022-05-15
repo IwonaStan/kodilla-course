@@ -1,4 +1,4 @@
-package com.kodilla.stream.exception.Homework;
+package exception.Homework;
 
 import java.util.ArrayList;
 import java.util.List;
