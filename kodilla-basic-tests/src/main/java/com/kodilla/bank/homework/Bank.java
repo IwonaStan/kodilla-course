@@ -3,12 +3,12 @@ package com.kodilla.bank.homework;
 public class Bank {
 
     CashMachine[] totalCashMachines;
-    int numberOfCashMachines, varPositive, varNegative;
+    int numberOfCashMachines;
     double totalBalance, negBalance, posBalance, negAverage, posAverage;
 
     public Bank() {
         this.totalCashMachines = new CashMachine[0];
-        this.numberOfCashMachines = this.varPositive = this.varNegative = 0;
+        this.numberOfCashMachines = 0;
         this.totalBalance = this.negBalance = this.posBalance = this.negAverage = posAverage = 0;
     }
 
@@ -41,19 +41,28 @@ public class Bank {
         return posBalance;
     }
     public double averageNegativeTransaction() {
+        double negativeBalance = 0;
+        int varNegative = 0;
         for (int i=0; i<numberOfCashMachines; i++) {
-            if (totalCashMachines[i].negativeTransaction<0)
+            if (totalCashMachines[i].negativeTransaction<0) {
+                negativeBalance += totalCashMachines[i].negativeTransaction;
                 varNegative += totalCashMachines[i].countNegative;
+            }
         }
-        negAverage = negBalance/varNegative;
+        System.out.println(negativeBalance + " " + varNegative);
+        negAverage = negativeBalance/(double) varNegative;
         return negAverage;
     }
     public double averagePositiveTransaction() {
+        double varPositive = 0;
+        int positiveBalance = 0;
         for (int i=0; i<numberOfCashMachines; i++) {
-            if (totalCashMachines[i].positiveTransaction>0)
+            if (totalCashMachines[i].positiveTransaction>0) {
+                positiveBalance += totalCashMachines[i].positiveTransaction;
                 varPositive += totalCashMachines[i].countPositive;
+            }
         }
-        posAverage = posBalance/varPositive;
+        posAverage = positiveBalance/(double) varPositive;
         return posAverage;
     }
 }
