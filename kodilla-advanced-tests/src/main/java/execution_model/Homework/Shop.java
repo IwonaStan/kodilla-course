@@ -6,6 +6,7 @@ import java.util.List;
 public class Shop {
 
     List<Order> shop = new ArrayList<>();
+    int min, max = 0;
 
     public void addOrder (Order order) {
         shop.add(order);
@@ -13,10 +14,10 @@ public class Shop {
     public int orderGetSize() {
         return this.shop.size();
     }
-    public List<Order> getOrders (int min, int max) {
+    public List<Order> getOrders (int first, int last) {
         List<Order> orders = new ArrayList<>();
         for (Order order:shop) {
-            if (order.getDate()>min && order.getDate()<max)
+            if (order.getDate()>first && order.getDate()<last)
                 orders.add(order);
         }
         return orders;
