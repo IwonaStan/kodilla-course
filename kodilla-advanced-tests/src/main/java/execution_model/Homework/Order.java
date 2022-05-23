@@ -1,15 +1,14 @@
 package execution_model.Homework;
 
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 
 public class Order {
 
     double orderValue;
-    int date;
-    SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MMM-yy");
+    LocalDate date;
     String login;
 
-    public Order(double orderValue, int date, String login) {
+    public Order(double orderValue, LocalDate date, String login) {
         this.orderValue = orderValue;
         this.date = date;
         this.login = login;
@@ -21,11 +20,11 @@ public class Order {
     public void setOrderValue(double orderValue) {
         this.orderValue = orderValue;
     }
-    public int getDate() {
+    public LocalDate getLocalDate() {
         return date;
     }
-    public void setDate(int date) {
-        this.date = date;
+    public void setLocalDate(LocalDate localDate) {
+        this.date = localDate;
     }
     public String getLogin() {
         return login;
@@ -36,10 +35,8 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "orderValue=" + orderValue +
+        return "Order: " + "orderValue=" + orderValue +
                 ", date=" + date +
-                ", login='" + login + '\'' +
-                '}';
+                ", login=" + login + '\n';
     }
 }
