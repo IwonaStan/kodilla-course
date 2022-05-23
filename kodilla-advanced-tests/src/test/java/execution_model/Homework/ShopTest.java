@@ -40,11 +40,11 @@ class ShopTest {
         shopOrders.add(order3);
         shopOrders.add(order4);
 
-        shopOrders.equals(shop.getOrders(LocalDate.of(2004,10,10),LocalDate.of(2020,10,10)));
+        assertEquals(shopOrders,shop.getOrders(LocalDate.of(2004,10,10),LocalDate.of(2020,10,10)));
     }
     @Test
     void getOrdersWithWrongDates() {
-        shopOrders.equals(shop.getOrders(LocalDate.of(2030,10,10),LocalDate.of(2020,10,10)));
+        assertEquals(shopOrders,shop.getOrders(LocalDate.of(2030,10,10),LocalDate.of(2020,10,10)));
     }
     @Test
     void getOrdersByValueWithCorrectValues() {
