@@ -1,4 +1,4 @@
-package com.kodilla.collections.adv.exercises.dictionary;
+package com.kodilla.collections.adv.exercises;
 
 public enum PartOfSpeech {
     NOUN,

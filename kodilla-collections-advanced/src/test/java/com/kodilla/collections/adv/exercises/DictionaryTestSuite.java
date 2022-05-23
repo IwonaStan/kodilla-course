@@ -1,4 +1,4 @@
-package com.kodilla.collections.adv.exercises.dictionary;
+package com.kodilla.collections.adv.exercises;
 
 import org.junit.jupiter.api.Test;
 
