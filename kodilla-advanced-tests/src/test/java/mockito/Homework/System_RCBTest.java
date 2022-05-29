@@ -19,14 +19,14 @@ class System_RCBTest {
     public void addNewSubscriber() {
         system_rcb.addNewSubscriber(subscriber, places);
 
-        Assertions.assertEquals(1,system_rcb.users.size());
+        Assertions.assertTrue(subscriber.addNewSubscriber(subscriber, places));
     }
     @Test
     public void addNewLocalization() {
         system_rcb.addNewSubscriber(subscriber, places);
         system_rcb.addNewLocalization(subscriber, localization);
 
-        Assertions.assertEquals(1,system_rcb.users.get(subscriber).size());
+        Assertions.assertTrue(subscriber.addNewLocalization(subscriber, localization));
     }
     @Test
     public void sendRegulations() {
@@ -81,7 +81,7 @@ class System_RCBTest {
 
         system_rcb.removeLocalization(subscriber, localization1);
 
-        Assertions.assertEquals(1,system_rcb.users.get(subscriber).size());
+        Assertions.assertTrue(subscriber.removeSubscriber(subscriber));
     }
     @Test
     public void removeAllLocalization() {
@@ -94,6 +94,20 @@ class System_RCBTest {
         system_rcb.removeLocalization(subscriber, localization);
         system_rcb.removeLocalization(subscriber, localization1);
 
-        Assertions.assertEquals(0,system_rcb.users.size());
+        Assertions.assertTrue(subscriber.removeSubscriber(subscriber));
+    }
+    @Test
+    public void sendToSubscriberWithMenyLocalizations() {
+        Localization localization1 = Mockito.mock(Localization.class);
+        Localization localization2 = Mockito.mock(Localization.class);
+
+        system_rcb.addNewSubscriber(subscriber, places);
+        system_rcb.addNewLocalization(subscriber, localization);
+        system_rcb.addNewLocalization(subscriber, localization1);
+        system_rcb.addNewLocalization(subscriber, localization2);
+
+        system_rcb.sendAlert(localization1, alert_rcb);
+
+        Mockito.verify(subscriber,Mockito.times(1)).sendAlert(alert_rcb);
     }
 }

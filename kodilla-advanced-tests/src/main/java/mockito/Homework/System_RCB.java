@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class System_RCB {
 
-    Map<Subscriber, Set<Localization>> users = new HashMap<>();
+    private Map<Subscriber, Set<Localization>> users = new HashMap<>();
 
     public void addNewSubscriber (Subscriber subscriber, Set<Localization> localizations) {
         this.users.put(subscriber, localizations);
@@ -25,9 +25,10 @@ public class System_RCB {
         Set<Localization> localizations1 = new HashSet<>();
         for (Map.Entry<Subscriber, Set<Localization>> usersEntry : users.entrySet()) {
             localizations1 = usersEntry.getValue();
-            for (Localization city : localizations1)
+            for (Localization city : localizations1) {
                 if (city.equals(local))
                     usersEntry.getKey().sendAlert(alert_rcb);
+            }
         }
     }
     public void removeSubscriber (Subscriber subscriber) {
@@ -39,6 +40,6 @@ public class System_RCB {
             user.remove(localization);
             this.users.put(subscriber, user);
         }
-        if (user.size()==0 )removeSubscriber(subscriber);
+        if (user.size()==0) removeSubscriber(subscriber);
     }
 }
