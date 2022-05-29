@@ -17,8 +17,7 @@ class System_RCBTest {
 
     @Test
     public void addNewSubscriber() {
-        system_rcb.addNewSubscriber(subscriber, places);
-
+        Mockito.when(subscriber.addNewSubscriber(subscriber, places)).thenReturn(true);
         Assertions.assertTrue(subscriber.addNewSubscriber(subscriber, places));
     }
     @Test
@@ -26,6 +25,7 @@ class System_RCBTest {
         system_rcb.addNewSubscriber(subscriber, places);
         system_rcb.addNewLocalization(subscriber, localization);
 
+        Mockito.when(subscriber.addNewLocalization(subscriber, localization)).thenReturn(true);
         Assertions.assertTrue(subscriber.addNewLocalization(subscriber, localization));
     }
     @Test
@@ -81,7 +81,8 @@ class System_RCBTest {
 
         system_rcb.removeLocalization(subscriber, localization1);
 
-        Assertions.assertTrue(subscriber.removeSubscriber(subscriber));
+        Mockito.when(subscriber.removeLocalization(subscriber, localization1)).thenReturn(true);
+        Assertions.assertTrue(subscriber.removeLocalization(subscriber, localization1));
     }
     @Test
     public void removeAllLocalization() {
@@ -94,6 +95,7 @@ class System_RCBTest {
         system_rcb.removeLocalization(subscriber, localization);
         system_rcb.removeLocalization(subscriber, localization1);
 
+        Mockito.when(subscriber.removeSubscriber(subscriber)).thenReturn(true);
         Assertions.assertTrue(subscriber.removeSubscriber(subscriber));
     }
     @Test

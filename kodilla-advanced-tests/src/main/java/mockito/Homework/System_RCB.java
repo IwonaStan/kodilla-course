@@ -9,8 +9,9 @@ public class System_RCB {
 
     private Map<Subscriber, Set<Localization>> users = new HashMap<>();
 
-    public void addNewSubscriber (Subscriber subscriber, Set<Localization> localizations) {
+    public boolean addNewSubscriber (Subscriber subscriber, Set<Localization> localizations) {
         this.users.put(subscriber, localizations);
+        return true;
     }
     public void addNewLocalization (Subscriber subscriber, Localization local) {
         Set<Localization> localizations = this.users.get(subscriber);
