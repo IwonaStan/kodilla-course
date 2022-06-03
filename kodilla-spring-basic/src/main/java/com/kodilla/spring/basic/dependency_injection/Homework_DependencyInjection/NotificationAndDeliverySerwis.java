@@ -1,4 +1,4 @@
-package com.kodilla.spring.basic.dependency_injection.Homework;
+package com.kodilla.spring.basic.dependency_injection.Homework_DependencyInjection;
 
 public class NotificationAndDeliverySerwis implements DeliveryService, NotificationService {
 
