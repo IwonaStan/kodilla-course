@@ -38,4 +38,5 @@ class CarApplicationTest {
         Assertions.assertEquals("Hello, this is Cabrio", type);
         Assertions.assertTrue(lights);
     }
+
 }

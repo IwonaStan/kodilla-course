@@ -21,7 +21,7 @@ public class CarApplication {
         return new Cabrio();
     }
     @Bean
-    public void randomCar() {
+    public int randomCar() {
         Car car;
         Random generator = new Random();
         int auto = generator.nextInt(4);
@@ -62,5 +62,6 @@ public class CarApplication {
             break;
             default: break;
         }
+        return auto;
     }
 }
