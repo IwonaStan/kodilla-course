@@ -11,6 +11,7 @@ public class UserDialogs {
             String s = scanner.nextLine();
             try {
                 int rounds = Integer.parseInt(s);
+                scanner.close();
                 return rounds;
             }
             catch (Exception e) {

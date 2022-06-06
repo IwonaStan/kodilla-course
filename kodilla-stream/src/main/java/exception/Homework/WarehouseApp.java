@@ -17,6 +17,7 @@ public class WarehouseApp {
             String s = scanner.nextLine();
         try {
             warehouse.getOrder(s);
+            scanner.close();
         } catch (OrderDoesntExistException e) {
             System.out.println("Wrong order number :(");
         }

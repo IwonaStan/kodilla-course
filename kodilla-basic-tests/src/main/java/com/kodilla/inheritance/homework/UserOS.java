@@ -17,14 +17,17 @@ public class UserOS {
                 System.out.println("Attempt to turn on the system...");
                 windowsxp.turnOn();
                 windowsxp.turnOff();
+                scanner.close();
             break;
             case "B":
                 System.out.println("Windows 8 was published in " +windows8.yearOfPublishment);
                 System.out.println("Attempt to turn on the system...");
                 windows8.turnOn();
                 windows8.turnOff();
+                scanner.close();
             break;
             default: System.out.println("Wrong choice.");
+                     scanner.close();
         }
     }
 }
