@@ -6,4 +6,8 @@ include 'kodilla-stream'
 include 'kodilla-advanced-tests'
 include 'kodilla-advanced-tests'
 include 'kodilla-spring-basic'
+include 'kodilla-rest-api'
+include 'kodilla-stream:kodilla-rest-api'
+findProject(':kodilla-stream:kodilla-rest-api')?.name = 'kodilla-rest-api'
+include 'kodilla-rest-api'
 

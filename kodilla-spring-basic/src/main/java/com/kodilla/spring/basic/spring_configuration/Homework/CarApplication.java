@@ -21,8 +21,8 @@ public class CarApplication {
         return new Cabrio();
     }
     @Bean
-    public int randomCar() {
-        Car car;
+    public Car randomCar() {
+        Car car = null;
         Random generator = new Random();
         int auto = generator.nextInt(4);
         int time = generator.nextInt(24);
@@ -62,6 +62,6 @@ public class CarApplication {
             break;
             default: break;
         }
-        return auto;
+        return car;
     }
 }

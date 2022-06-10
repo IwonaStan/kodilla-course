@@ -38,5 +38,12 @@ class CarApplicationTest {
         Assertions.assertEquals("Hello, this is Cabrio", type);
         Assertions.assertTrue(lights);
     }
+    @Test
+    public void ShouldCreateCar () {
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring.basic");
+        Car car  = (Car) context.getBean("randomCar");
+        String type = car.getCarType();
 
+        Assertions.assertNotNull(type);
+    }
 }
