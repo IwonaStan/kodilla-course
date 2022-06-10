@@ -12,7 +12,7 @@ public class GamblingMachineTestSuite {
 
     @ParameterizedTest
     @CsvFileSource(resources = "/gamblingMchineSets.csv",numLinesToSkip = 0)
-    public void GamblingMachineTestSuite (String numbers) {
+    public void GamblingMachineTest (String numbers) {
 
         GamblingMachine gamblingMachine = new GamblingMachine();
         Set<Integer> check = new HashSet<>();

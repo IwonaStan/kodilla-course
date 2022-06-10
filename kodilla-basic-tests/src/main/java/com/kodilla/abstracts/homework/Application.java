@@ -20,6 +20,7 @@ class Application {
                 double side = scanner.nextDouble();
                 square.area(side, side);
                 square.circuit(side, side);
+                scanner.close();
                 break;
             case "R" :
                 System.out.println("Enter the side 'a' of the rectangle:");
@@ -28,14 +29,17 @@ class Application {
                 double sideB = scanner.nextDouble();
                 rectangle.area(sideA, sideB);
                 rectangle.circuit(sideA, sideB);
+                scanner.close();
                 break;
             case "C" :
                 System.out.println("Enter radius of the circle:");
                 double radius= scanner.nextDouble();
                 circle.area(radius, radius);
                 circle.circuit(radius, radius);
+                scanner.close();
                 break;
             default: System.out.println("Wrong choice.");
+                     scanner.close();
         }
 
     }

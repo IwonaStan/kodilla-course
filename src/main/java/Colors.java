@@ -5,6 +5,7 @@ public class Colors {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter letter: R, G or B:");
         String letter = scanner.nextLine().trim().toUpperCase();
+        scanner.close();
         return letter;
     }
 
