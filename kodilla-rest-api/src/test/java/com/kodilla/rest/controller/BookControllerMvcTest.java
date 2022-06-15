@@ -1,5 +1,6 @@
 package com.kodilla.rest.controller;
 
+import com.google.gson.Gson;
 import com.kodilla.rest.domain.BookDto;
 import com.kodilla.rest.service.BookService;
 import org.hamcrest.Matchers;
@@ -13,6 +14,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.util.ArrayList;
@@ -42,5 +44,17 @@ public class BookControllerMvcTest {
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().is(200))
                 .andExpect(MockMvcResultMatchers.jsonPath("$", Matchers.hasSize(2)));
+    }
+    @Test
+    void shouldAddBooks() throws Exception {
+
+        Gson gson = new Gson();
+        String bookDto = gson.toJson(new BookDto("Title 1", "Author 1"));
+
+        mockMvc.perform(MockMvcRequestBuilders.post("/books")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(bookDto))
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isOk());
     }
 }
