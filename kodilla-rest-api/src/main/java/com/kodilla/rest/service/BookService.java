@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public class BookService {
-    private List<BookDto> books = new ArrayList<>();
+    public List<BookDto> books = new ArrayList<>();
 
     public List<BookDto> getBooks() {
         return books;

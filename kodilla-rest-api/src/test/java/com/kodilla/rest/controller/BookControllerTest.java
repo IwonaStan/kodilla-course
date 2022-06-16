@@ -32,15 +32,13 @@ class BookControllerTest {
     public void shouldAddBook() {
         BookService bookService = new BookService();
         BookController bookController = new BookController(bookService);
-        List<BookDto> listOfBooks = new ArrayList<>();
 
-        listOfBooks = bookController.getBooks();
+        List<BookDto> listOfBooks = bookService.getBooks();
         assertThat(listOfBooks).hasSize(0);
 
-        BookDto bookDto = new BookDto("Title 1", "Author 1");
-        bookController.addBook(bookDto);
+        bookController.addBook(new BookDto("Title 1", "Author 1"));
 
-        listOfBooks = bookController.getBooks();
+        listOfBooks = bookService.getBooks();
         assertThat(listOfBooks).hasSize(1);
     }
 }

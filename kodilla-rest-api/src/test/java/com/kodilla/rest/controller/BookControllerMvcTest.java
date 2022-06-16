@@ -29,7 +29,6 @@ public class BookControllerMvcTest {
 
     @MockBean
     private BookService bookService;
-    private BookController bookController;
 
     @Test
     void shouldFetchBooks() throws Exception {
@@ -56,5 +55,11 @@ public class BookControllerMvcTest {
                 .content(bookDto))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk());
+
+        mockMvc.perform(MockMvcRequestBuilders.get("/books")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andDo(MockMvcResultHandlers.print())
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.jsonPath("$", Matchers.hasSize(1)));
     }
 }
