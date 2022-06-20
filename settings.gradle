@@ -10,4 +10,8 @@ include 'kodilla-rest-api'
 include 'kodilla-stream:kodilla-rest-api'
 findProject(':kodilla-stream:kodilla-rest-api')?.name = 'kodilla-rest-api'
 include 'kodilla-rest-api'
+include 'kodilla-soap'
+include 'kodilla-soap'
+include 'soap-xml-files'
+include 'soap-homework'
 

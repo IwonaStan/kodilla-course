@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase xmlns:con="http://eviware.com/soapui/config" searchProperties="true" name="Existing course" maxResults="0"
+              keepSession="false" failTestCaseOnErrors="true" failOnError="true"
+              id="3e399ea4-3143-4a9f-975c-65419b6b0633">
+    <con:settings/>
+    <con:testStep name="getCourse" id="157ae80b-7f0b-40b8-a88b-443830a7792d" type="request">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <con:interface>CoursesPortSoap11</con:interface>
+            <con:operation>getCourse</con:operation>
+            <con:request name="getCourse" id="e071990d-eb2e-4404-aa49-bb4f861edb5c">
+                <con:settings>
+                    <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">
+                        <xml-fragment/>
+                    </con:setting>
+                </con:settings>
+                <con:encoding>UTF-8</con:encoding>
+                <con:endpoint>http://localhost:8080/ws</con:endpoint>
+                <con:request>
+                    +<![CDATA[]]>
+                </con:request>
+                <con:assertion id="3563c5c4-2b9a-486e-8c8b-5f16b4ee4b40" type="Simple Contains">
+                    <con:configuration/>
+                </con:assertion>
+                <con:assertion name="Contains" id="3d7eff7b-0bbb-4fe8-8439-a304c7c8f71d" type="Simple Contains">
+                    <con:configuration>
+                        <token>
+                            <ns2:course>
+                        </token>
+                        <ignoreCase>false</ignoreCase>
+                        <useRegEx>false</useRegEx>
+                    </con:configuration>
+                </con:assertion>
+                <con:credentials>
+                    <con:authType>No Authorization</con:authType>
+                </con:credentials>
+                <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+                <con:jmsPropertyConfig/>
+                <con:wsaConfig version="200508" mustUnderstand="NONE"
+                               action="http://kodilla.com/courses/soap/CoursesPort/getCourseRequest"/>
+                <con:wsrmConfig version="1.2"/>
+            </con:request>
+        </con:config>
+    </con:testStep>
+    <con:properties/>
+</con:testCase>
