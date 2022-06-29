@@ -10,6 +10,7 @@ public class GoogleExample {
         System.setProperty("webdriver.chrome.driver", "c:\\Selenium-drivers\\Chrome\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.google.com");
+        driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]/div")).click();
 
         WebElement inputField = driver.findElement(By.name("q"));
         inputField.sendKeys("Kodilla");
