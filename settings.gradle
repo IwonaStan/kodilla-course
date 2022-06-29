@@ -14,4 +14,5 @@ include 'kodilla-soap'
 include 'kodilla-soap'
 include 'soap-xml-files'
 include 'soap-homework'
+include 'kodilla-selenium'
 
