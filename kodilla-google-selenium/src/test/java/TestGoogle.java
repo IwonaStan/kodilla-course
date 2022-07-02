@@ -19,7 +19,7 @@ public class TestGoogle {
         driver.navigate().to("http://www.google.com");
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]/div")).click();
     }
-/*
+    /*
     @After
     public void tearDown() {
         driver.close();
