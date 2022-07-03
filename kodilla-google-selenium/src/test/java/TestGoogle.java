@@ -34,4 +34,13 @@ public class TestGoogle {
         RandomResults randomResults = new RandomResults(driver);
         randomResults.showResult();
     }
+    @Test
+    public void isCorrectSiteOpen() {
+        GoogleSearch googleSearch = new GoogleSearch(driver);
+        googleSearch.searchResults();
+        GoogleResults googleResults = new GoogleResults(driver);
+        googleResults.randomResult(driver);
+        RandomResults randomResults = new RandomResults(driver);
+        randomResults.showResult();
+    }
 }
