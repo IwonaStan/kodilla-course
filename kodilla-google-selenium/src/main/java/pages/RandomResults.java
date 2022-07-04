@@ -12,10 +12,10 @@ public class RandomResults extends AbstractPage {
         PageFactory.initElements(this.driver, this);
     }
 
-    public String showResult() {
+    public String showRandomResult() {
         String str = driver.getCurrentUrl();
         String str1 = str.substring(0,str.indexOf("/",8));
-        System.out.println("\nFrom RandomResults.java: \n" + str1);
+        System.out.println("-\tURL from RandomResults.java:\n" + str1 + "\n");
         return str1;
     }
 }

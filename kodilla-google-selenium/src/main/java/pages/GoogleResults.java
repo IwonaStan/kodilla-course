@@ -29,7 +29,7 @@ public class GoogleResults extends AbstractPage {
         int result = randomNumber();
         System.out.println("Random result number: " + result);
 
-        saveText(result);
+        showResult(result);
 
         WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.elementToBeClickable(results.get(result).findElement(By.tagName("h3")))).click();
@@ -42,9 +42,9 @@ public class GoogleResults extends AbstractPage {
         int number = random.nextInt(results.size());
         return number;
     }
-    public String saveText(int r) {
+    public String showResult(int r) {
         description = results.get(r).findElement(By.cssSelector("a[href]")).getText();
-        System.out.println("\nFrom GoogleResults.java: \n" + description);
+        System.out.println("-\tMessage from GoogleResults.java:\n" + description);
         return description;
     }
 }

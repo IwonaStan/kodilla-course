@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -19,12 +20,11 @@ public class TestGoogle {
         driver.navigate().to("http://www.google.com");
         driver.findElement(By.xpath("//*[@id=\"L2AGLb\"]/div")).click();
     }
-    /*
     @After
     public void tearDown() {
         driver.close();
     }
-*/
+
     @Test
     public void testGooglePage() {
         GoogleSearch googleSearch = new GoogleSearch(driver);
@@ -32,15 +32,6 @@ public class TestGoogle {
         GoogleResults googleResults = new GoogleResults(driver);
         googleResults.randomResult(driver);
         RandomResults randomResults = new RandomResults(driver);
-        randomResults.showResult();
-    }
-    @Test
-    public void isCorrectSiteOpen() {
-        GoogleSearch googleSearch = new GoogleSearch(driver);
-        googleSearch.searchResults();
-        GoogleResults googleResults = new GoogleResults(driver);
-        googleResults.randomResult(driver);
-        RandomResults randomResults = new RandomResults(driver);
-        randomResults.showResult();
+        randomResults.showRandomResult();
     }
 }
