@@ -7,9 +7,9 @@ Feature: number
     Then I should told <answer>
     Examples:
       |number|answer|
-      |6|"yes"|
-      |10|"yes"|
-      |15|"yes"|
-      |4|"no"|
-      |8|"no"|
-      |11|"no"|
+      |6|"Fizz"|
+      |10|"Buzz"|
+      |15|"FizzBuzz"|
+      |4|"None"|
+      |8|"None"|
+      |11|"None"|
