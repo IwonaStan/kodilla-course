@@ -4,7 +4,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/is_it_summer.feature"}, plugin = {"pretty"}
+        features = {"src/test/resources/seasonchecker/is_it_summer.feature"}, plugin = {"pretty"}
 )
-public class TestRunner {
+public class TestSeasonRunner {
 }
