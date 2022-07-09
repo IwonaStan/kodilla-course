@@ -1,4 +1,4 @@
-Feature: Cash Withdrawal
+Feature: Cash Withdrawal And
 
   Scenario: Successful withdrawal from a wallet in credit
     Given I have deposited $200 in my wallet
