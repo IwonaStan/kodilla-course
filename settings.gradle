@@ -19,4 +19,5 @@ include 'kodilla-google-selenium'
 include 'kodilla-cucumber'
 include 'Cucumber'
 include 'kodilla-code-coverage'
+include 'Kodilla-jdbc'
 

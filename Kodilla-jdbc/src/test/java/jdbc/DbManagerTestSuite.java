@@ -1,4 +1,4 @@
-package com.kodilla.jdbc;
+package jdbc;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
