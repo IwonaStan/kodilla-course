@@ -16,16 +16,10 @@ public class BadCodeExample {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        BadCodeExample badCodeExample = (BadCodeExample) o;
-
-        return type != null ? type.equals(badCodeExample.type) : badCodeExample.type == null;
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BadCodeExample that = (BadCodeExample) o;
+        return type.equals(that.type);
     }
 
     @Override
